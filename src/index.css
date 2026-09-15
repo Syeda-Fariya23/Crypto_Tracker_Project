@@ -28,7 +28,7 @@ body {
 
 /* Header Styles */
 .header {
-  /* background: rgba(20, 20, , 1); */
+  /* background: rgba(20, 20, 1); */
   backdrop-filter: blur(20px);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   padding: 2rem 0;
@@ -115,7 +115,7 @@ body {
   font-weight: 600;
 }
 
-.filter-group select {
+/* .filter-group select {
   padding: 0.75rem 1.25rem;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -125,6 +125,23 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   backdrop-filter: blur(10px);
+} */
+ .filter-group select {
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #add8e6;
+  border-radius: 8px;
+  background: #111;
+  color: #fff;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  color-scheme: dark;
+}
+
+.filter-group select option {
+  background: #111;
+  color: #fff;
 }
 
 .filter-group select:hover {
