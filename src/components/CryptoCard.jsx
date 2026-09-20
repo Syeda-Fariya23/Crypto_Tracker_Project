@@ -23,6 +23,8 @@ export const CryptoCard = ({ crypto }) => {
         <div className="crypto-price">
           <p className="price">
             {formatPrice(crypto.current_price)}
+            {" "}
+            (₹{crypto.inr_price.toLocaleString("en-IN")})
           </p>
 
           <p
@@ -45,6 +47,8 @@ export const CryptoCard = ({ crypto }) => {
             <span className="stat-label">Market Cap</span>
             <span className="stat-value">
               {formatMarketCap(crypto.market_cap)}
+              {" "}
+              (₹{formatMarketCap(crypto.inr_market_cap)})
             </span>
           </div>
 
@@ -52,6 +56,8 @@ export const CryptoCard = ({ crypto }) => {
             <span className="stat-label">Volume</span>
             <span className="stat-value">
               {formatMarketCap(crypto.total_volume)}
+              {" "}
+              (₹{formatMarketCap(crypto.inr_volume)})
             </span>
           </div>
         </div>

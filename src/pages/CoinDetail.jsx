@@ -109,7 +109,11 @@ export const CoinDetail = () => {
 
         <div className="coin-price-section">
           <div className="current-price">
-            <h2>{formatPrice(coin.market_data.current_price.usd)}</h2>
+            <h2>{formatPrice(coin.market_data.current_price.usd)}
+              {" "}
+              (₹{coin.market_data.current_price.inr.toLocaleString("en-IN")})
+
+            </h2>
             <span
               className={`change-badge ${isPositive ? "positive" : "negative"}`} >
               {isPositive ? "↑" : "↓"} {Math.abs(priceChange).toFixed(2)}%
@@ -121,6 +125,8 @@ export const CoinDetail = () => {
               <span className="range-label">24h High</span>
               <span className="range-value">
                 {formatPrice(coin.market_data.high_24h.usd)}
+                {" "}
+                (₹{coin.market_data.high_24h.inr.toLocaleString("en-IN")})
               </span>
             </div>
 
@@ -128,6 +134,8 @@ export const CoinDetail = () => {
               <span className="range-label">24h Low</span>
               <span className="range-value">
                 {formatPrice(coin.market_data.low_24h.usd)}
+                {" "}
+                (₹{coin.market_data.low_24h.inr.toLocaleString("en-IN")})
               </span>
             </div>
           </div>
@@ -176,6 +184,8 @@ export const CoinDetail = () => {
             <span className="stat-label">Market Cap</span>
             <span className="stat-value">
               ${formatMarketCap(coin.market_data.market_cap.usd)}
+              {" "}
+              (₹{formatMarketCap(coin.market_data.market_cap.inr)})
             </span>
           </div>
           
@@ -183,6 +193,8 @@ export const CoinDetail = () => {
             <span className="stat-label">Volume (24)</span>
             <span className="stat-value">
               ${formatMarketCap(coin.market_data.total_volume.usd)}
+              {" "}
+              (₹{formatMarketCap(coin.market_data.total_volume.inr)})
             </span>
           </div>
 
